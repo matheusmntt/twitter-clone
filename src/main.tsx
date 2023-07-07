@@ -15,6 +15,7 @@ import {
 import './global.css'
 
 import twitterLogo from './assets/logo.twitter.svg'
+import { Tweet } from './components/Tweet'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
@@ -78,6 +79,29 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
           </form>
 
           <div className="separator" />
+
+          <Tweet
+            name="Matheus Monteiro"
+            username="@matheusmnt"
+            userImg="https://github.com/matheusmntt.png"
+          >
+            <p>
+              Acabei de migrar um projeto React GIGANTE de create-react-app para
+              Vite e os resultados foram: <br /> <br /> ✅ npm start: De 32s
+              para 400ms (sim, demorava 30s)
+              <br /> ✅ npm build: De 120s para 22s <br /> <br /> Além disso,
+              troquei do Yarn para o PNPM e o install das deps mudou de 24s para
+              8s 🔥
+            </p>
+          </Tweet>
+
+          <Tweet
+            name="Lauren Neto"
+            username="@lauuuuumnt"
+            userImg="https://source.unsplash.com/random?b=1"
+          >
+            <p>Hoje eu só queria dormir</p>
+          </Tweet>
         </main>
       </div>
     </div>
