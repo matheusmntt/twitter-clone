@@ -1,24 +1,22 @@
 import React from 'react'
 
 import { ArrowsClockwise, ChatCircle, Heart } from 'phosphor-react'
+import { Link } from 'react-router-dom'
 import s from './Tweet.module.css'
 
 interface ITweetProps {
-  name: string
-  username: string
-  userImg: string
   children: React.ReactNode
 }
 
-export const Tweet = ({ name, username, children, userImg }: ITweetProps) => {
+export const Tweet = ({ children }: ITweetProps) => {
   return (
-    <a href="#" className={s.tweet}>
-      <img src={userImg} alt="Matheus Monteiro" />
+    <Link to="/status" className={s.tweet}>
+      <img src="https://github.com/matheusmntt.png" alt="Matheus Monteiro" />
 
       <div className={s.tweetContent}>
         <div className={s.tweetContentHeader}>
-          <strong>{name}</strong>
-          <span>{username}</span>
+          <strong>Matheus Monteiro</strong>
+          <span>@matheusmnt</span>
         </div>
 
         {children}
@@ -37,6 +35,6 @@ export const Tweet = ({ name, username, children, userImg }: ITweetProps) => {
           </button>
         </div>
       </div>
-    </a>
+    </Link>
   )
 }

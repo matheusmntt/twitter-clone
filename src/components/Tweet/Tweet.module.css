@@ -57,5 +57,5 @@
 }
 
 .tweet .tweetContent .tweetContentFooter button:hover {
-  color: #1da1f2;
+  color: var(--twitter-blue);
 }
